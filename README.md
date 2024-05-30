@@ -1,8 +1,63 @@
-## 1. DA/junho/freqeuntzoneOldman.csv 파일은 연도별 노인 교통사고 데이터 입니다. 각지역별로 구할수 있고, 연간데이터라 데이터 양이 그리 많지는 않습니다.
+## 1. 노인 교통사고 데이터
 
+### 데이터 링크
 
-## 2. DA/junho/total_data.csv 파일은 서울시 이동데이터 2017~2022 까지 다 합쳐둔 파일입니다. 일별데이터고 지역은 큰 구단위로 확인이 가능합니다.(e.g 중구, 용산구 등등)
+[**https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/노인사고데이터**](https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/%EB%85%B8%EC%9D%B8%EC%82%AC%EA%B3%A0%EB%8D%B0%EC%9D%B4%ED%84%B0)
 
-## 3. 간단한 데이터 형태는 DA/junho/example.ipynb 에서 확인해주시면될 것 같아요!
+Column구성
 
-## 4. 추가로 진행하시면서 이상한거 발견하시면 언제든지 연락주십시요...
+'year', 'sidocode', 'guguncode', 'spot_nm', 'occrrnc_cnt',
+'sido_sgg_nm', 'caslt_cnt', 'dth_dnv_cnt', 'se_dnv_cnt', 'sl_dnv_cnt',
+'wnd_dnv_cnt', 'lo_crd', 'la_crd'
+
+**year**: 연도
+
+**sidocode**: 11(서울 )
+
+**spot_nm** : 지점명
+
+**guguncode**: 구
+
+**spot_nm**: 지점명(상세주소), e.g 서울특별시 강남구 논현동(청하빌딩 부근)
+
+**occrrnc_cnt**: 교통사고 발생건수
+
+**sido_sgg_nm**: 시도군구명(spotnm이라 겹처서 굳이?)
+
+**caslt_cnt**: 사상자수
+
+**dth_dnv_cnt**: 사망자수
+
+**se_dnv_cnt**: 중상자수
+
+**sl_dnv_cnt**: 경상자수
+
+**wnd_dnv_cnt**: 부상신고자
+
+**lo_crd**: 위도
+
+**la_crd**: 경도
+
+### **간단한 사용법→ https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/DA/junho/example.ipynb**
+
+위 링크 확인
+
+### 만약 일별데이터가 필요하다 싶으면..
+
+이걸 사용해도 괜찮지 않을까… 
+
+https://www.data.go.kr/data/15094143/fileData.do?recommendDataYn=Y
+
+## 2.  서울시 생활이동 데이터
+
+### 데이터
+
+https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/서울이동데이터_지역별
+
+위링크 들어가면 확인 할 수 있고, 지역별로 나누어두었습니다.
+
+### 데이터 간단한 설명
+
+그 시간대에 그 지역에 생활 인구가 얼마나 많이 몰려있는지 를 측정한 데이터입니다
+
+활용예시: https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/DA/junho/example.ipynb
