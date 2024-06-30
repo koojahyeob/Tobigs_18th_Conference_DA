@@ -1,63 +1,55 @@
-## 1. 노인 교통사고 데이터
+# 데이터 설명
 
-### 데이터 링크
+## 데이터 링크
 
-[**https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/노인사고데이터**](https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/%EB%85%B8%EC%9D%B8%EC%82%AC%EA%B3%A0%EB%8D%B0%EC%9D%B4%ED%84%B0)
+[https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/final.csv](https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/final.csv)
 
-Column구성
+## 열설명
 
-'year', 'sidocode', 'guguncode', 'spot_nm', 'occrrnc_cnt',
-'sido_sgg_nm', 'caslt_cnt', 'dth_dnv_cnt', 'se_dnv_cnt', 'sl_dnv_cnt',
-'wnd_dnv_cnt', 'lo_crd', 'la_crd'
+총 1200 개의 랜덤으로 뽑힌 도로좌표로 구성한 헥사곤들에 대한 정보
 
-**year**: 연도
+`'x'` :  도로x 좌표
 
-**sidocode**: 11(서울 )
+`'y'` : 도로 y좌표
 
-**spot_nm** : 지점명
+`'h3_address'` : 해당 도로를 포함하는 헥사곤 좌표
 
-**guguncode**: 구
+`'neighbours'` : 해당 핵사곤의 근접한 6개의 핵사곤 좌표
 
-**spot_nm**: 지점명(상세주소), e.g 서울특별시 강남구 논현동(청하빌딩 부근)
+`'neighbours_centroids'` : 근접한 6개의 핵사곤의 중심좌표
+`'caslt_cnt'`  : 중심 헥사곤의 사상자수
 
-**occrrnc_cnt**: 교통사고 발생건수
+`'dth_dnv_cnt`' :중심 헥사곤에서의 사망자수
 
-**sido_sgg_nm**: 시도군구명(spotnm이라 겹처서 굳이?)
+`'se_dnv_cnt'`  : 중심 헥사곤에서의 중상자수
 
-**caslt_cnt**: 사상자수
+`'sl_dnv_cnt'` : 중심 헥사곤에서의 경상자수
 
-**dth_dnv_cnt**: 사망자수
+`'wnd_dnv_cnt'` :중심 헥사곤에서의 부상 신고자수
+`'caslt_cnt_i'` : i번째 이웃 헥사곤에서의 사상자수  ($i=1 \sim 6)$
 
-**se_dnv_cnt**: 중상자수
+('dth_dnv_cnt_i','se_dnv_cnt_i','sl_dnv_cnt_i','wnd_dnv_cnt_i’ 도 마찬가지로)
 
-**sl_dnv_cnt**: 경상자수
+`'bus_station_cnt'` : 중심핵사곤 안에 존재하는 버스스테이션 수
 
-**wnd_dnv_cnt**: 부상신고자
+`'traffic_cnt'` :중심 핵사곤 안에 존재하는 신호등 수
+`'pleasure_cnt'` : 중심좌표 반경 500m안에 존재하는 유흥업소 수
 
-**lo_crd**: 위도
+`'seoul_police_cnt'` :중심좌표 반경 500m안에 존재하는 경찰서수
 
-**la_crd**: 경도
+`'park_cnt'`  : 중심좌표 반경 500m안에 존재하는 공원수
 
-### **간단한 사용법→ https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/DA/junho/example.ipynb**
+`'seoul_safety_cnt'` : 중심좌표 반경 500m안에 존재하는 어린이 안전구역
+`'firefighter_cnt'` :중심좌표 반경 500m안에 존재하는 소방서수
 
-위 링크 확인
+`'crossroad_cnt'` : 중심 헥사곤 안에 존재하는 교차로
 
-### 만약 일별데이터가 필요하다 싶으면..
+`'도로10이하_cnt'` : 중심 헥사곤 안에 존자하는 도로폭 10m이하의 도로수
 
-이걸 사용해도 괜찮지 않을까… 
+`'도로10_20_cnt'` :중심 헥사곤 안에 존자하는 도로폭 10 이상 20m이하의 도로수
+`'도로20_30_cnt'` :중심 헥사곤 안에 존자하는 도로폭 20이상 30m이하의 도로수
 
-https://www.data.go.kr/data/15094143/fileData.do?recommendDataYn=Y
+`'도로30이상_cnt'` :중심 헥사곤 안에 존자하는 도로폭 30m이상의 도로수
 
-## 2.  서울시 생활이동 데이터
-
-### 데이터
-
-https://github.com/lookbackjh/Tobigs_18th_Conference_DA/tree/main/DA/junho/서울이동데이터_지역별
-
-위링크 들어가면 확인 할 수 있고, 지역별로 나누어두었습니다.
-
-### 데이터 간단한 설명
-
-그 시간대에 그 지역에 생활 인구가 얼마나 많이 몰려있는지 를 측정한 데이터입니다
-
-활용예시: https://github.com/lookbackjh/Tobigs_18th_Conference_DA/blob/main/DA/junho/example.ipynb
+`'silver_cnt'`: 중심좌표 반경 500m안에 존재하는 노인보호구역(요ㅇ양원수 ) 
+`'crosswalk_cnt'` : 중심 헥사곤 안에 존재하는 횡단보도수
