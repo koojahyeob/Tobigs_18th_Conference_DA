@@ -58,4 +58,5 @@
 `'crosswalk_cnt'` : 중심 헥사곤 안에 존재하는 횡단보도수
 
 소방서 좌표계가 뭔가 이상해서 추가할 필요 있음.
+Example: https://github.com/lookbackjh/Tobigs_18th_Conference_DA
 
