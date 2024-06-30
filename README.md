@@ -31,7 +31,7 @@
 
 ('dth_dnv_cnt_i','se_dnv_cnt_i','sl_dnv_cnt_i','wnd_dnv_cnt_i’ 도 마찬가지로)
 
-`'bus_station_cnt'` : 중심핵사곤 안에 존재하는 버스스테이션 수
+`'bus_station_cnt'` : 중심핵사곤 안에 존재하는 버스정류장 수
 
 `'traffic_cnt'` :중심 핵사곤 안에 존재하는 신호등 수
 
