@@ -17,6 +17,7 @@
 `'neighbours'` : 해당 핵사곤의 근접한 6개의 핵사곤 좌표
 
 `'neighbours_centroids'` : 근접한 6개의 핵사곤의 중심좌표
+
 `'caslt_cnt'`  : 중심 헥사곤의 사상자수
 
 `'dth_dnv_cnt`' :중심 헥사곤에서의 사망자수
